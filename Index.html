@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>By Manz | Link in Bio ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #1e0033, #4a148c, #7b1fa2, #ab47bc);
+        }
+
+        /* Motif bintang & sparkle */
+        .stars,
+        .twinkling {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%; height: 100%;
+            z-index: -2;
+        }
+
+        .stars {
+            background: #000 url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png') repeat top center;
+            z-index: -2;
+        }
+
+        .twinkling {
+            background: transparent url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png') repeat top center;
+            animation: move-twinkle 200s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes move-twinkle {
+            from { background-position: 0 0; }
+            to { background-position: -10000px 5000px; }
+        }
+
+        /* Konten utama */
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.5);
+            margin-bottom: 25px;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(255,255,255,0.6), 0 0 40px #ab47bc, 0 0 60px #7b1fa2;
+            transition: all 0.5s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255,255,255,0.9), 0 0 80px #ab47bc, 0 0 120px #7b1fa2;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255,255,255,0.6), 0 0 40px #ab47bc;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s;
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 4px 15px rgba(171,71,188,0.3);
+            text-align: left;
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(171,71,188,0.5), 0 0 40px #ab47bc;
+        }
+
+        .btn-icon {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+            flex-shrink: 0;
+        }
+
+        .btn:hover .btn-icon {
+            transform: scale(1.15);
+        }
+
+        .social {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .social a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background bintang sparkling -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="container">
+        <!-- Profil picture -->
+        <img src="https://i.ibb.co/PsKLB6B1/1.jpg" alt="By Manz" class="profile-img"/>
+        
+        <h1>By Manz</h1>
+        <p class="bio">Jakarta Vibes | Modz & Cheat MLBB 🔥✨</p>
+        
+        <div class="links">
+            <a href="https://t.me/CheatMLBBManz" class="btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="btn-icon"/>
+                Cheat ML
+            </a>
+            <a href="https://www.tiktok.com/@manz_modz" class="btn">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" class="btn-icon"/>
+                TikTok
+            </a>
+            <a href="https://t.me/AllApkModzManz" class="btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="btn-icon"/>
+                Mod Apk
+            </a>
+            <a href="https://youtube.com/@manzmodz" class="btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" class="btn-icon"/>
+                YouTube
+            </a>
+        </div>
+        
+        <div class="social">
+            <a href="https://t.me/CheatMLBBManz">Cheat ML</a> • 
+            <a href="https://www.tiktok.com/@manz_modz">TT</a> • 
+            <a href="https://t.me/AllApkModzManz">Mod Apk</a> • 
+            <a href="https://youtube.com/@manzmodz">YT</a>
+        </div>
+    </div>
+</body>
+</html>
